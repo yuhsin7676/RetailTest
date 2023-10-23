@@ -1,0 +1,39 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-actuals-table
+      author: yushin.im
+      comment: "Создание таблицы Actuals"
+      changes:
+        - createTable:
+            remarks: "Таблица Actuals"
+            tableName: Actuals
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: date
+                  type: DATE
+              - column:
+                  name: material_no
+                  type: INTEGER
+              - column:
+                  name: ch3_ship_to_code
+                  type: INTEGER
+              - column:
+                  remarks: "сеть"
+                  name: chain
+                  type: TEXT
+              - column:
+                  remarks: "Volume, units"
+                  name: volume
+                  type: INTEGER
+              - column:
+                  remarks: "Actual Sales Value"
+                  name: sales
+                  type: FLOAT
+              - column:
+                  remarks: "Признак промо"
+                  name: promo
+                  type: TEXT
+                  defaultValue: "Regular"

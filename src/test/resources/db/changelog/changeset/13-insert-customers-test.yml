@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-customers
+      author: yushin.im
+      changes:
+        - loadData:
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: data/customers-test.csv
+            quotchar: '"'
+            separator: ','
+            relativeToChangelogFile: true
+            tableName: Customers
+            columns:
+              - column:
+                  name: ch3_ship_to_code
+                  type: NUMBER
+              - column:
+                  name: ch3_ship_to_name
+                  type: STRING
+              - column:
+                  name: chain
+                  type: STRING

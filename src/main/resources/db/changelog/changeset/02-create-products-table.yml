@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-products-table
+      author: yushin.im
+      comment: "Создание таблицы Products"
+      changes:
+        - createTable:
+            remarks: "Таблица Products"
+            tableName: Products
+            columns:
+              - column:
+                  name: material_no
+                  type: INTEGER
+              - column:
+                  name: material_desc_rus
+                  type: TEXT
+              - column:
+                  name: l3_product_category_code
+                  type: INTEGER
+              - column:
+                  name: l3_product_category_name
+                  type: TEXT

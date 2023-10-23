@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/11-insert-actuals-test.yml
+  - include:
+      file: db/changelog/changeset/12-insert-products-test.yml
+  - include:
+      file: db/changelog/changeset/13-insert-customers-test.yml
+  - include:
+      file: db/changelog/changeset/14-insert-price-test.yml
+  - include:
+      file: db/changelog/changeset/15-add-promo-to-actuals.sql

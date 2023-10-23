@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-price
+      author: yushin.im
+      changes:
+        - loadData:
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: data/price-test.csv
+            quotchar: '"'
+            separator: ','
+            relativeToChangelogFile: true
+            tableName: Price
+            columns:
+              - column:
+                  name: chain
+                  type: STRING
+              - column:
+                  name: material_no
+                  type: NUMBER
+                  constraints:
+                    foreignKeyName: fk_price_material_no
+                    referencedTableName: Products
+                    referencedColumnNames: material_no
+                    deleteCascade: true
+              - column:
+                  name: price
+                  type: NUMBER

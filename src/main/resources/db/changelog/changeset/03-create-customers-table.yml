@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-customers-table
+      author: yushin.im
+      comment: "Создание таблицы Customers"
+      changes:
+        - createTable:
+            remarks: "Таблица Customers"
+            tableName: Customers
+            columns:
+              - column:
+                  name: ch3_ship_to_code
+                  type: INTEGER
+              - column:
+                  name: ch3_ship_to_name
+                  type: TEXT
+              - column:
+                  name: chain
+                  type: TEXT

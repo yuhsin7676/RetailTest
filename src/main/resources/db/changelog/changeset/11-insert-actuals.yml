@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-actuals
+      author: yushin.im
+      changes:
+        - loadData:
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: data/actuals.csv
+            quotchar: '"'
+            separator: ','
+            relativeToChangelogFile: true
+            tableName: Actuals
+            columns:
+                - column:
+                      name: date
+                      type: STRING
+                - column:
+                      name: material_no
+                      type: STRING
+                - column:
+                      name: ch3_ship_to_code
+                      type: STRING
+                - column:
+                      name: chain
+                      type: STRING
+                - column:
+                      name: volume
+                      type: NUMBER
+                - column:
+                      name: sales
+                      type: NUMBER

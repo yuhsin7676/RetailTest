@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-products
+      author: yushin.im
+      changes:
+        - loadData:
+            commentLineStartsWith: '#'
+            encoding: UTF-8
+            file: data/products-test.csv
+            quotchar: '"'
+            separator: ','
+            relativeToChangelogFile: true
+            tableName: Products
+            columns:
+              - column:
+                  name: material_no
+                  type: NUMBER
+              - column:
+                  name: material_desc_rus
+                  type: STRING
+              - column:
+                  name: l3_product_category_code
+                  type: NUMBER
+              - column:
+                  name: l3_product_category_name
+                  type: STRING

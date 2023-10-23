@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changeset/01-create-actuals-table.yml
+  - include:
+      file: db/changelog/changeset/02-create-products-table.yml
+  - include:
+      file: db/changelog/changeset/03-create-customers-table.yml
+  - include:
+      file: db/changelog/changeset/04-create-price-table.yml

@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-price-table
+      author: yushin.im
+      comment: "Создание таблицы Price"
+      changes:
+        - createTable:
+            remarks: "Таблица Price"
+            tableName: Price
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+              - column:
+                  name: chain
+                  type: TEXT
+              - column:
+                  name: material_no
+                  type: INTEGER
+              - column:
+                  name: price
+                  type: FLOAT
